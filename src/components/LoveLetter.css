@@ -1,0 +1,121 @@
+.love-letter {
+    padding: var(--spacing-xl) 0;
+}
+
+.letter-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+    position: relative;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.letter-header h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-sm);
+}
+
+.letter-decoration {
+    font-size: 3rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.letter-content {
+    line-height: 2;
+}
+
+.letter-content p {
+    margin-bottom: var(--spacing-md);
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: var(--color-text-secondary);
+    text-align: justify;
+}
+
+.letter-opening {
+    font-family: var(--font-heading);
+    font-size: 1.5rem !important;
+    color: var(--color-text-primary) !important;
+    font-style: italic;
+    margin-bottom: var(--spacing-md) !important;
+}
+
+.letter-closing {
+    font-weight: 500;
+    color: var(--color-text-primary) !important;
+    margin-top: var(--spacing-lg) !important;
+}
+
+.letter-signature {
+    font-family: var(--font-heading);
+    font-size: 1.25rem !important;
+    text-align: right;
+    margin-top: var(--spacing-lg) !important;
+    font-style: italic;
+}
+
+.letter-signature span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .letter-container {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .letter-content p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .love-letter {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .letter-container {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .letter-header {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .letter-decoration {
+        font-size: 2rem;
+    }
+
+    .letter-content {
+        line-height: 1.8;
+    }
+
+    .letter-content p {
+        margin-bottom: var(--spacing-sm);
+        font-size: 1rem;
+    }
+
+    .letter-opening {
+        font-size: 1.25rem !important;
+        margin-bottom: var(--spacing-sm) !important;
+    }
+
+    .letter-closing {
+        margin-top: var(--spacing-md) !important;
+    }
+
+    .letter-signature {
+        font-size: 1.125rem !important;
+        margin-top: var(--spacing-md) !important;
+    }
+
+    .letter-signature span {
+        font-size: 1.25rem;
+    }
+}

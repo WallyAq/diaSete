@@ -1,0 +1,110 @@
+.playlist {
+    padding: var(--spacing-xl) 0;
+}
+
+.playlist-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.playlist-decoration {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2.5rem;
+}
+
+.music-note {
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+.music-note:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.music-note:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.music-note:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.playlist-embed {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--spacing-md);
+    background: var(--color-bg-dark);
+}
+
+.playlist-embed iframe {
+    display: block;
+    border-radius: 20px;
+}
+
+.playlist-message {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: rgba(232, 32, 109, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(232, 32, 109, 0.2);
+}
+
+.playlist-message p {
+    margin: 0;
+    color: var(--color-primary-light);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .playlist-container {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .playlist-decoration {
+        font-size: 2rem;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .playlist-embed iframe {
+        height: 352px;
+    }
+}
+
+@media (max-width: 480px) {
+    .playlist {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .playlist-container {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .playlist-decoration {
+        font-size: 1.75rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .playlist-embed iframe {
+        height: 352px;
+    }
+
+    .playlist-message {
+        padding: var(--spacing-sm);
+    }
+
+    .playlist-message p {
+        font-size: 0.95rem;
+    }
+}
